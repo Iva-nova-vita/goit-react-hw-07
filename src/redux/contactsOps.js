@@ -24,3 +24,15 @@ export const addContact = createAsyncThunk(
         }
       }
 )
+
+export const deleteContact = createAsyncThunk(
+    'contacts/deleteContact', 
+    async (id, thunkAPI) => {
+        try {
+            const response = await axios.delete(`https://66a63ec123b29e17a1a21ea5.mockapi.io/contacts/${id}`)
+            return response.data
+        } catch (error) {
+          return thunkAPI.rejectWithValue(error.message);
+        }
+      }
+)
