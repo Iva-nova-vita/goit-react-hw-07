@@ -1,0 +1,26 @@
+.item {
+    list-style: none;
+    width: 250px;
+    padding: 24px 100px 24px 24px;
+    position: relative;
+    border: 2px black solid;
+    border-radius: 4px;
+    text-align: left;
+    margin: 24px 24px 24px 0;
+    display: inline-block;
+
+    svg {
+        margin-right: 12px;
+    }
+}
+
+.name, .phone {
+    font-weight: bold;
+}
+
+.btnDelete {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+}
